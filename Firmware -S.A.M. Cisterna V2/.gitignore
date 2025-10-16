@@ -1,0 +1,39 @@
+# Build files
+.pio/
+.vscode/
+*.hex
+*.bin
+*.elf
+
+# Configuration (may contain sensitive data)
+src/data/config.txt
+src/data/wifi_config.json
+
+# Backup files
+*.bak
+*~
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arduino IDE
+*.o
+*.a
+*.eep
+*.lss
+*.map
+*.sym
+CLAUDE.MD

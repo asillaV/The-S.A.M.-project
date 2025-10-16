@@ -1,0 +1,28 @@
+# Arduino/PlatformIO build files
+.pio/
+.vscode/
+.pioenvs/
+.piolibdeps/
+*.hex
+*.bin
+*.elf
+
+# SPIFFS configuration (may contain sensitive data)
+src/data/wifi_config.txt
+
+# Backup files
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+*.swp
+*.swo
+.idea/
+
+# Logs
+*.log
