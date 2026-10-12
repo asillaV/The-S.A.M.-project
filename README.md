@@ -48,8 +48,9 @@ Entrambi i progetti includono documentazione tecnica (`docs/`), esempi di server
 ## Configurazione iniziale dei dispositivi
 1. Alimentare il dispositivo con il firmware caricato.
 2. Attendere l'avvio in modalita' configurazione (se non esiste configurazione salvata). Le reti di default sono:
-   - Box V2: SSID `ESP32-Access-Point`, password `password123`.
-   - Cisterna V2: SSID `SAM-CISTERNA`, password `password123`.
+   - Box V2: SSID `ESP32-Access-Point`, password `<la-tua-password>`.
+   - Cisterna V2: SSID `SAM-CISTERNA`, password `<la-tua-password>`.
+   La password dell'access point di configurazione va scelta dall'utente: il sorgente contiene un valore provvisorio di sviluppo (`configurator.cpp` per il Box, `src/config/config.h` per la Cisterna) che va sostituito con una password propria **prima** di caricare il firmware.
 3. Collegarsi alla rete WiFi del dispositivo e aprire `http://192.168.4.1`.
 4. Compilare il form con SSID, password della rete domestica e parametri del server HTTP.
 5. Salvare: il dispositivo riavvia, memorizza su SPIFFS e tenta la connessione alla WiFi configurata.

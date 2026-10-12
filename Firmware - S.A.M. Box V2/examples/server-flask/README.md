@@ -17,6 +17,8 @@ python app.py
 
 Server will start on `http://0.0.0.0:5000`
 
+The Flask debugger is **off** by default. Set `SAM_DEBUG=1` only for local development on a trusted network (the Werkzeug debugger allows remote code execution).
+
 ## Endpoints
 
 - `POST /data` - Receives JPEG images

@@ -89,7 +89,7 @@ pio device monitor -b 9600
 3. Il dispositivo entrerà automaticamente in **modalità configurazione** se non trova una configurazione salvata
 4. **Connettiti al WiFi**:
    - SSID: `SAM-CISTERNA`
-   - Password: `password123`
+   - Password: `<la-tua-password>` (va scelta dall'utente e impostata in `src/config/config.h`, `CONFIG_AP_PASSWORD`, prima del flash: il sorgente contiene solo un valore provvisorio di sviluppo)
 5. **Apri il browser** e vai a: `http://192.168.4.1`
 6. **Compila il form** con:
    - SSID della tua rete WiFi

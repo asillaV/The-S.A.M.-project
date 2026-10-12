@@ -187,5 +187,7 @@ if __name__ == '__main__':
     print("\nServer running on http://0.0.0.0:5000")
     print("Press Ctrl+C to stop\n")
 
-    # Start Flask server
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Start Flask server. The Werkzeug debugger allows remote code execution:
+    # keep it off unless you explicitly set SAM_DEBUG=1 on a trusted network.
+    debug = os.environ.get('SAM_DEBUG', '').lower() in ('1', 'true', 'yes')
+    app.run(host='0.0.0.0', port=5000, debug=debug)

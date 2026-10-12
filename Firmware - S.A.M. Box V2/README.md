@@ -91,7 +91,7 @@ pio device monitor -b 9600
 
 1. **Accendi il dispositivo**
 2. Se non è presente una configurazione WiFi, il dispositivo entra automaticamente in **Modalità Configurazione**
-3. Connettiti alla rete WiFi: `ESP32-Access-Point` (password: `password123`)
+3. Connettiti alla rete WiFi: `ESP32-Access-Point` (password: `<la-tua-password>`; va scelta dall'utente e impostata in `src/modules/configurator.cpp` prima del flash: il sorgente contiene solo un valore provvisorio di sviluppo)
 4. Apri il browser e vai su: `http://192.168.4.1`
 5. Inserisci le credenziali WiFi e i dettagli del server:
    - **SSID**: Nome della tua rete WiFi
