@@ -3,6 +3,12 @@
 ## Panoramica
 S.A.M. (Smart Agricultural Monitor) e' una suite di firmware basati su ESP32 pensata per digitalizzare il monitoraggio di colture, serre e cisterne. In questa cartella sono raccolti i due firmware ufficiali della versione 2.0.0, pensati per lavorare insieme a un server HTTP che riceve immagini, dati ambientali e livelli dell'acqua per analisi e telecontrollo da remoto.
 
+## Architettura
+
+![Architettura di S.A.M.: dal nodo sensori al server](docs/architecture/architecture.png)
+
+Percorso primario (evidenziato): il loop del firmware Box V2 acquisisce un'immagine JPEG e legge i sensori, poi `network.cpp` invia l'immagine con una POST a `/data` e le misure in JSON a `/api/data` del server Flask di esempio, che le salva su file (`uploads/`, `sensor_data.json`, `sensor_log.txt`). Il diagramma mostra solo ciò che è nel codice di questo repository: non c'è un bot Telegram, e per il firmware Cisterna manca un server di esempio per `/api/cisterna`. Versione interattiva: [`docs/architecture/architecture.html`](docs/architecture/architecture.html), generata con [Archify](https://github.com/tt-a1i/archify) da [`architecture.spec.json`](docs/architecture/architecture.spec.json).
+
 ## Contenuto del repository
 - `Firmware - S.A.M. Box V2/`: firmware per un nodo di campo con ESP32-CAM, sensori di temperatura, umidita', umidita' del suolo, livello dell'acqua e microcontrollore ATtiny85 per l'interfaccia sensori.
 - `Firmware -S.A.M. Cisterna V2/`: firmware per il monitoraggio di cisterne tramite sensore ultrasonico e un DHT22 per temperatura e umidita' ambiente.

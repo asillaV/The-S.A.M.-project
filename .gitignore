@@ -44,3 +44,5 @@ CLAUDE.MD
 CHANGELOG.md
 REFACTORING_SUMMARY.md
 README_old.md
+# Archify: receipt locale con percorsi assoluti
+docs/architecture/*.delivery.json
